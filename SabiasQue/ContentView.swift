@@ -7,66 +7,70 @@
 
 import SwiftUI
 
+// VStack
+// Text()
+// LazyVStack()
+// -HStack()
+// -- Image() -- VStack Text()
+//                      Text()
+
+
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 30) {
-            Text("Selecciona una categoria")
+        VStack {
+            Text("Selecciona una Categoria")
                 .foregroundColor(ColorConstants.primaryText)
                 .font(.custom("Lato-Bold", size: 36))
                 .lineLimit(2)
-                .allowsTightening(true)
+                .allowsTightening(true) 
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            CategoryCard("Animales", shortFact: "Sabias que: los dientes de un tiburón son tan duros como el acero", imageName: "animals")
-            CategoryCard("Deportes", shortFact: "Sabias que: los dientes de un tiburón son tan duros como el acero", imageName: "sports")
-            CategoryCard("Historia", shortFact: "Sabias que: los dientes de un tiburón son tan duros como el acero", imageName: "history")
-            CategoryCard("Ciencia", shortFact: "Sabias que: los dientes de un tiburón son tan duros como el acero", imageName: "science")
+            LazyVStack {
+                CategoryCard("Animales", "Aqui escribiremos algo curioso sobre animales", imageName: "animals")
+                CategoryCard("Deportes", "Aqui escribiremos algo curioso sobre animales", imageName: "sports")
+                CategoryCard("Historia", "Aqui escribiremos algo curioso sobre animales", imageName: "history")
+                CategoryCard("Ciencia", "Aqui escribiremos algo curioso sobre animales", imageName: "science")
+            }
             Spacer()
-        }
-        .padding()
+        }.padding()
     }
 }
 
 struct CategoryCard: View {
 
-    var title = "Titulo"
-    var shortFact = "Lorem impsum...."
-    var imageName = ""
+    var title: String = ""
+    var subtitle: String = ""
+    var imageName: String = ""
 
-    init(_ title: String, shortFact: String, imageName: String) {
+    init(_ title: String, _ subtitle: String, imageName: String) {
         self.title = title
-        self.shortFact = shortFact
+        self.subtitle = subtitle
         self.imageName = imageName
     }
 
     var body: some View {
-        VStack {
-            HStack(alignment: .center, content: {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(16, antialiased: true)
-                Spacer()
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(title)
-                        .font(.custom("Lato-Bold", size: 24))
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(ColorConstants.primaryText)
-                    Text(shortFact)
-                        .font(.custom("Lato-Regular", size: 14))
-                        .foregroundColor(ColorConstants.secondaryText)
-                }
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 10, trailing: 0))
-            })
-            .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 20))
-        }
-        .background(RoundedRectangle(cornerRadius: 16.0)
-                        .fill(Color.white)
+        HStack(alignment: .center, spacing: 0, content: {
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(16)
+            VStack {
+                Text(title)
+                    .font(.custom("Lato-Bold", size: 24))
+                    .foregroundColor(ColorConstants.primaryText)
+                Text(subtitle)
+                    .font(.custom("Lato-Regular", size: 14))
+                    .foregroundColor(ColorConstants.secondaryText)
+            }
+            .padding(EdgeInsets(top: 30, leading: 0, bottom: 15, trailing: 0))
+        })
+        .padding(EdgeInsets(top: -20, leading: 0, bottom: -17, trailing: 0))
+        .background(RoundedRectangle(cornerRadius: 16)
+                        .fill(ColorConstants.contentBackground)
                         .shadow(radius: 20, x: 10, y: 10))
-        .foregroundColor(ColorConstants.contentBackground)
 
+        
     }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
