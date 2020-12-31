@@ -7,39 +7,58 @@
 
 import Foundation
 
+enum FactType: String, CaseIterable {
+    case animals
+    case sports
+    case history
+    case science
+
+    func name() -> String {
+        switch self {
+        case .animals:
+            return "Animales"
+        case .sports:
+            return "Deportes"
+        case .history:
+            return "Historia"
+        case .science:
+            return "Ciencia"
+        default:
+            return "Random"
+        }
+    }
+
+}
+
 struct FactsGenerator {
 
+    struct Category {
+        // FactType is used to load data from JSON
+        let type: FactType
+        let name: String
+        let imageName: String
+
+    }
+
+
+    private let animals = Category(type: .animals, name: "Animales", imageName: "animals")
+
     func generate() -> [DetailView.ViewModel] {
-            var animalsFactViewModel: DetailView.ViewModel {
-                let fact = Bundle.main.decode([Fact].self, from: "animals.json")
-                let randomFact = fact.randomElement()!
-                let viewModel = DetailView.ViewModel(category: "Animales", title: randomFact.title, body: randomFact.body, image: "animals")
-                return viewModel
-            }
+        var viewModels = [DetailView.ViewModel]()
+        FactType.allCases.forEach({ (factType) in
+            let factViewModel = generateFact(for: factType)
+            viewModels.append(factViewModel)
+        })
+        return viewModels
+    }
 
-            var sportsFactViewModel: DetailView.ViewModel {
-                let animalsFact = Bundle.main.decode([Fact].self, from: "sports.json")
-                let randomFact = animalsFact.randomElement()!
-                let viewModel = DetailView.ViewModel(category: "Deportes", title: randomFact.title, body: randomFact.body, image: "sports")
-                return viewModel
-            }
 
-            var historyFactViewModel: DetailView.ViewModel {
-                let fact = Bundle.main.decode([Fact].self, from: "history.json")
-                let randomFact = fact.randomElement()!
-                let viewModel = DetailView.ViewModel(category: "Historia", title: randomFact.title, body: randomFact.body, image: "history")
-                return viewModel
-            }
 
-            var scienceFactViewModel: DetailView.ViewModel {
-                let fact = Bundle.main.decode([Fact].self, from: "science.json")
-                let randomFact = fact.randomElement()!
-                let viewModel = DetailView.ViewModel(category: "Ciencia", title: randomFact.title, body: randomFact.body, image: "science")
-                return viewModel
-            }
-
-            return [animalsFactViewModel, sportsFactViewModel,
-                    historyFactViewModel, scienceFactViewModel]
+    func generateFact(for factType: FactType) -> DetailView.ViewModel {
+        let fact = Bundle.main.decode([Fact].self, from: "\(factType.rawValue).json")
+        let randomFact = fact.randomElement()!
+        let viewModel = DetailView.ViewModel(factType: factType, title: randomFact.title, body: randomFact.body, image: factType.rawValue)
+        return viewModel
     }
 
 }
