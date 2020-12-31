@@ -11,7 +11,8 @@ struct DetailView: View {
 
     let viewModel: ViewModel
 
-    struct ViewModel {
+    struct ViewModel: Hashable {
+        let category: String
         let title: String
         let body: String
         let image: String
@@ -21,8 +22,6 @@ struct DetailView: View {
 
     var body: some View {
         VStack(spacing: -20) {
-
-
             HStack {
                 Image(viewModel.image)
                     .resizable()
@@ -70,7 +69,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = DetailView.ViewModel(title: "Los dientes del tiburon", body: "Bacon ipsum dolor amet short ribs kevin brisket t-bone pancetta, landjaeger leberkas swine pig jerky sirloin. Pork loin tongue bresaola picanha ribeye. Jowl ham cupim ribeye tenderloin pork belly short loin pork loin andouille t-bone chislic ball tip porchetta pastrami corned beef. Rump pork chop venison cow frankfurter prosciutto kielbasa burgdoggen tri-tip, jowl spare ribs swine filet mignon doner shank. Brisket tail fatback ground round, tenderloin ball tip swine spare ribs landjaeger biltong tri-tip pastrami venison turkey. Shank burgdoggen leberkas venison, chuck andouille hamburger pork belly.", image: "science")
+        let viewModel = DetailView.ViewModel(category: "Animales", title: "Los dientes del tiburon", body: "Bacon ipsum dolor amet short ribs kevin brisket t-bone pancetta, landjaeger leberkas swine pig jerky sirloin. Pork loin tongue bresaola picanha ribeye. Jowl ham cupim ribeye tenderloin pork belly short loin pork loin andouille t-bone chislic ball tip porchetta pastrami corned beef. Rump pork chop venison cow frankfurter prosciutto kielbasa burgdoggen tri-tip, jowl spare ribs swine filet mignon doner shank. Brisket tail fatback ground round, tenderloin ball tip swine spare ribs landjaeger biltong tri-tip pastrami venison turkey. Shank burgdoggen leberkas venison, chuck andouille hamburger pork belly.", image: "science")
         DetailView(viewModel: viewModel)
     }
 }

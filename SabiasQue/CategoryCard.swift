@@ -11,11 +11,9 @@ struct CategoryCard: View {
 
     @State var showModal = false
 
-    var title: String = ""
     let detailViewModel: DetailView.ViewModel
 
-    init(_ title: String, detailInfo: DetailView.ViewModel) {
-        self.title = title
+    init(detailInfo: DetailView.ViewModel) {
         self.detailViewModel = detailInfo
     }
 
@@ -29,7 +27,7 @@ struct CategoryCard: View {
                 .frame(width: 160, height: 160, alignment: .bottomLeading)
                 .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
             VStack {
-                Text(title)
+                Text(detailViewModel.category)
                     .font(.custom("Lato-Bold", size: 24))
                     .foregroundColor(ColorConstants.primaryText)
                 Text(detailViewModel.title)
@@ -47,7 +45,7 @@ struct CategoryCard: View {
 
 
         .sheet(isPresented: $showModal, content: {
-            let viewModel = DetailView.ViewModel(title: detailViewModel.title, body: detailViewModel.body, image: detailViewModel.image)
+            let viewModel = DetailView.ViewModel(category: detailViewModel.category, title: detailViewModel.title, body: detailViewModel.body, image: detailViewModel.image)
             DetailView(viewModel: viewModel)
         })
         .onTapGesture {
@@ -59,5 +57,5 @@ struct CategoryCard: View {
 
 struct CategoryCard_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryCard("Ciencia", detailInfo: DetailView.ViewModel(title: "Sobre einstein", body: "Einstein era un loquillo", image: "science")) }
+        CategoryCard(detailInfo: DetailView.ViewModel(category: "Ciencia", title: "Sobre einstein", body: "Einstein era un loquillo", image: "science")) }
 }
