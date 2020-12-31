@@ -12,8 +12,7 @@ struct ColorConstants {
     static let primaryText = Color(hex: 0x333333)
     static let secondaryText = Color(hex: 0x4F4F4F)
     static let tertiaryText = Color(hex: 0x9E9E9E)
-    static let background = Color(hex: 0xE5E5E5)
-    static let contentBackground = Color(hex: 0xF5F5FA)
+    static let background = Color(hex: 0xF5F5FA)
 }
 
 extension Color {

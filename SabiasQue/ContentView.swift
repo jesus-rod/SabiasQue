@@ -7,69 +7,52 @@
 
 import SwiftUI
 
-// VStack
-// Text()
-// LazyVStack()
-// -HStack()
-// -- Image() -- VStack Text()
-//                      Text()
-
-
 struct ContentView: View {
+
+    var animalsFactViewModel: DetailView.ViewModel {
+        let fact = Bundle.main.decode([Fact].self, from: "animals.json")
+        let randomFact = fact.randomElement()!
+        let viewModel = DetailView.ViewModel(title: randomFact.title, body: randomFact.body, image: "animals")
+        return viewModel
+    }
+
+    var sportsFactViewModel: DetailView.ViewModel {
+        let animalsFact = Bundle.main.decode([Fact].self, from: "history.json")
+        let randomFact = animalsFact.randomElement()!
+        let viewModel = DetailView.ViewModel(title: randomFact.title, body: randomFact.body, image: "sports")
+        return viewModel
+    }
+
+    var historyFactViewModel: DetailView.ViewModel {
+        let fact = Bundle.main.decode([Fact].self, from: "history.json")
+        let randomFact = fact.randomElement()!
+        let viewModel = DetailView.ViewModel(title: randomFact.title, body: randomFact.body, image: "history")
+        return viewModel
+    }
+
+    var scienceFactViewModel: DetailView.ViewModel {
+        let fact = Bundle.main.decode([Fact].self, from: "science.json")
+        let randomFact = fact.randomElement()!
+        let viewModel = DetailView.ViewModel(title: randomFact.title, body: randomFact.body, image: "science")
+        return viewModel
+    }
+
+
     var body: some View {
         VStack {
-            Text("Selecciona una Categoria")
-                .foregroundColor(ColorConstants.primaryText)
-                .font(.custom("Lato-Bold", size: 36))
-                .lineLimit(2)
-                .allowsTightening(true) 
-                .frame(maxWidth: .infinity, alignment: .leading)
-
             LazyVStack {
-                CategoryCard("Animales", "Aqui escribiremos algo curioso sobre animales", imageName: "animals")
-                CategoryCard("Deportes", "Aqui escribiremos algo curioso sobre animales", imageName: "sports")
-                CategoryCard("Historia", "Aqui escribiremos algo curioso sobre animales", imageName: "history")
-                CategoryCard("Ciencia", "Aqui escribiremos algo curioso sobre animales", imageName: "science")
+                CategoryCard("Animales", detailInfo: animalsFactViewModel)
+                CategoryCard("Deportes", detailInfo: sportsFactViewModel)
+                CategoryCard("Historia", detailInfo: historyFactViewModel)
+                CategoryCard("Ciencia", detailInfo: scienceFactViewModel)
             }
-            Spacer()
-        }.padding()
-    }
-}
-
-struct CategoryCard: View {
-
-    var title: String = ""
-    var subtitle: String = ""
-    var imageName: String = ""
-
-    init(_ title: String, _ subtitle: String, imageName: String) {
-        self.title = title
-        self.subtitle = subtitle
-        self.imageName = imageName
-    }
-
-    var body: some View {
-        HStack(alignment: .center, spacing: 0, content: {
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(16)
-            VStack {
-                Text(title)
-                    .font(.custom("Lato-Bold", size: 24))
-                    .foregroundColor(ColorConstants.primaryText)
-                Text(subtitle)
-                    .font(.custom("Lato-Regular", size: 14))
-                    .foregroundColor(ColorConstants.secondaryText)
-            }
-            .padding(EdgeInsets(top: 30, leading: 0, bottom: 15, trailing: 0))
+        }.padding([.top, .bottom], 30)
+        .onDisappear(perform: {
+            print("reload now")
         })
-        .padding(EdgeInsets(top: -20, leading: 0, bottom: -17, trailing: 0))
-        .background(RoundedRectangle(cornerRadius: 16)
-                        .fill(ColorConstants.contentBackground)
-                        .shadow(radius: 20, x: 10, y: 10))
-
-        
+        .onAppear(perform: {
+            print("xx")
+        })
     }
 }
 
@@ -78,4 +61,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-

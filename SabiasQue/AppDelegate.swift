@@ -10,11 +10,23 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let appeareance = UINavigationBarAppearance()
+        appeareance.configureWithOpaqueBackground()
+        appeareance.shadowColor = .clear
+        appeareance.backgroundColor = UIColor(ColorConstants.background)
+
+        let attrs: [NSAttributedString.Key : Any] = [
+            .font: UIFont.init(name: "Lato-Bold", size: 36) ?? UIFont.monospacedSystemFont(ofSize: 36, weight: .black),
+            .foregroundColor: UIColor(ColorConstants.primaryText)
+        ]
+
+        appeareance.largeTitleTextAttributes = attrs
+        UINavigationBar.appearance().scrollEdgeAppearance = appeareance
+
         return true
+
     }
 
     // MARK: UISceneSession Lifecycle
