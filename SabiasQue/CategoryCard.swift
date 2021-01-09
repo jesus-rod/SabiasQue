@@ -32,6 +32,7 @@ struct CategoryCard: View {
                     .multilineTextAlignment(.center)
             }
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
+            .frame(maxWidth: .infinity)
         })
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 16)

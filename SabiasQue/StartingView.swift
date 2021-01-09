@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartingView: View {
+    let headerText = "SelectCategoryHeader".localized
     var body: some View {
         NavigationView {
             ScrollView {
@@ -15,7 +16,7 @@ struct StartingView: View {
             }
             .background(ColorConstants.background)
             .edgesIgnoringSafeArea([.bottom])
-            .navigationBarTitle("Selecciona una categoria")
+            .navigationBarTitle(headerText)
         }
     }
 }

@@ -19,12 +19,6 @@ struct ContentView: View {
                 }
             }
         }.padding([.top, .bottom], 30)
-        .onDisappear(perform: {
-            print("reload now")
-        })
-        .onAppear(perform: {
-            print("xx")
-        })
     }
 }
 

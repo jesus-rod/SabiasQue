@@ -16,13 +16,13 @@ enum FactType: String, CaseIterable {
     func name() -> String {
         switch self {
         case .animals:
-            return "Animales"
+            return "AnimalsCategoryTitle".localized
         case .sports:
-            return "Deportes"
+            return "SportsCategoryTitle".localized
         case .history:
-            return "Historia"
+            return "HistoryCategoryTitle".localized
         case .science:
-            return "Ciencia"
+            return "ScienceCategoryTitle".localized
         }
     }
 
@@ -52,7 +52,7 @@ struct FactsGenerator {
     func generateFact(for factType: FactType) -> DetailView.ViewModel {
         let fact = Bundle.main.decode([Fact].self, from: "\(factType.rawValue).json")
         let randomFact = fact.randomElement()!
-        let viewModel = DetailView.ViewModel(factType: factType, title: randomFact.title, body: randomFact.body.capitalized, image: factType.rawValue)
+        let viewModel = DetailView.ViewModel(factType: factType, title: randomFact.title, body: randomFact.body, image: factType.rawValue)
         return viewModel
     }
 

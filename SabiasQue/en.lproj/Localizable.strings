@@ -1,0 +1,14 @@
+/* 
+  Localization.strings
+  SabiasQue
+
+  Created by Jesus Rodriguez on 09.01.21.
+  
+*/
+"SelectCategoryHeader" = "Select a category";
+"DidYouKnowHeader" = "Did you know...";
+"BackCTA" = "Dismiss";
+"AnimalsCategoryTitle" = "Animals";
+"SportsCategoryTitle" = "Sports";
+"HistoryCategoryTitle" = "History";
+"ScienceCategoryTitle" = "Science";

@@ -20,6 +20,9 @@ struct DetailView: View {
 
     @Environment(\.presentationMode) var presentationMode
 
+    private let backButtonText = "BackCTA".localized
+    private let headerText = "DidYouKnowHeader".localized
+
     var body: some View {
         VStack(spacing: -20) {
             HStack {
@@ -28,7 +31,7 @@ struct DetailView: View {
                     .scaledToFit()
                     .frame(minWidth: 200, idealWidth: 200, maxWidth: .infinity, minHeight: 200, idealHeight: 200, maxHeight: 240, alignment: .bottomLeading)
 
-                Text("Sabias que...")
+                Text(headerText)
                     .shadow(radius: 2, x: 2, y: 2)
                     .font(.custom("Lato-Bold", size: 36))
                     .padding(EdgeInsets(top: 20, leading: 10, bottom: 20, trailing: 20))
@@ -50,7 +53,7 @@ struct DetailView: View {
 
 
                 Spacer()
-                MainCTAButton(title: "Regresar") {
+                MainCTAButton(title: backButtonText) {
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }.frame(maxWidth: .infinity)
