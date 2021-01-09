@@ -23,8 +23,6 @@ enum FactType: String, CaseIterable {
             return "Historia"
         case .science:
             return "Ciencia"
-        default:
-            return "Random"
         }
     }
 
@@ -40,9 +38,6 @@ struct FactsGenerator {
 
     }
 
-
-    private let animals = Category(type: .animals, name: "Animales", imageName: "animals")
-
     func generate() -> [DetailView.ViewModel] {
         var viewModels = [DetailView.ViewModel]()
         FactType.allCases.forEach({ (factType) in
@@ -57,7 +52,7 @@ struct FactsGenerator {
     func generateFact(for factType: FactType) -> DetailView.ViewModel {
         let fact = Bundle.main.decode([Fact].self, from: "\(factType.rawValue).json")
         let randomFact = fact.randomElement()!
-        let viewModel = DetailView.ViewModel(factType: factType, title: randomFact.title, body: randomFact.body, image: factType.rawValue)
+        let viewModel = DetailView.ViewModel(factType: factType, title: randomFact.title, body: randomFact.body.capitalized, image: factType.rawValue)
         return viewModel
     }
 

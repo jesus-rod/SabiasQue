@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		950E1C12259DBFF2006D7CB1 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0E259DBF38006D7CB1 /* animals.json */; };
-		950E1C13259DBFF2006D7CB1 /* sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0A259DBF37006D7CB1 /* sports.json */; };
-		950E1C14259DBFF2006D7CB1 /* science.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0B259DBF37006D7CB1 /* science.json */; };
-		950E1C15259DBFF2006D7CB1 /* history.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0C259DBF37006D7CB1 /* history.json */; };
+		950E1C12259DBFF2006D7CB1 /* animales.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0E259DBF38006D7CB1 /* animales.json */; };
+		950E1C13259DBFF2006D7CB1 /* deportes.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0A259DBF37006D7CB1 /* deportes.json */; };
+		950E1C14259DBFF2006D7CB1 /* ciencia.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0B259DBF37006D7CB1 /* ciencia.json */; };
+		950E1C15259DBFF2006D7CB1 /* historia.json in Resources */ = {isa = PBXBuildFile; fileRef = 950E1C0C259DBF37006D7CB1 /* historia.json */; };
 		950E1C1A259DC9A9006D7CB1 /* FactsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950E1C19259DC9A9006D7CB1 /* FactsGenerator.swift */; };
 		9535279F25974A35007F1D69 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535279E25974A35007F1D69 /* CategoryCard.swift */; };
 		953527A22597538B007F1D69 /* MainCTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953527A12597538B007F1D69 /* MainCTAButton.swift */; };
 		953527A5259886A8007F1D69 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953527A4259886A8007F1D69 /* Fact.swift */; };
+		954B8AF925A38896006520D1 /* sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 954B8AF525A38895006520D1 /* sports.json */; };
+		954B8AFA25A38896006520D1 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 954B8AF625A38895006520D1 /* animals.json */; };
+		954B8AFB25A38896006520D1 /* history.json in Resources */ = {isa = PBXBuildFile; fileRef = 954B8AF725A38895006520D1 /* history.json */; };
+		954B8AFC25A38896006520D1 /* science.json in Resources */ = {isa = PBXBuildFile; fileRef = 954B8AF825A38896006520D1 /* science.json */; };
 		95BB807C2595E368001FE75F /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB807B2595E368001FE75F /* StartingView.swift */; };
 		95BB808325962A13001FE75F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB808225962A13001FE75F /* DetailView.swift */; };
 		95C1391325861BC1009FC623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1391225861BC1009FC623 /* AppDelegate.swift */; };
@@ -30,14 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		950E1C0A259DBF37006D7CB1 /* sports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sports.json; sourceTree = "<group>"; };
-		950E1C0B259DBF37006D7CB1 /* science.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = science.json; sourceTree = "<group>"; };
-		950E1C0C259DBF37006D7CB1 /* history.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = history.json; sourceTree = "<group>"; };
-		950E1C0E259DBF38006D7CB1 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
+		950E1C0A259DBF37006D7CB1 /* deportes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = deportes.json; sourceTree = "<group>"; };
+		950E1C0B259DBF37006D7CB1 /* ciencia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ciencia.json; sourceTree = "<group>"; };
+		950E1C0C259DBF37006D7CB1 /* historia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = historia.json; sourceTree = "<group>"; };
+		950E1C0E259DBF38006D7CB1 /* animales.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animales.json; sourceTree = "<group>"; };
 		950E1C19259DC9A9006D7CB1 /* FactsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsGenerator.swift; sourceTree = "<group>"; };
 		9535279E25974A35007F1D69 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		953527A12597538B007F1D69 /* MainCTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCTAButton.swift; sourceTree = "<group>"; };
 		953527A4259886A8007F1D69 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		954B8AF525A38895006520D1 /* sports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sports.json; sourceTree = "<group>"; };
+		954B8AF625A38895006520D1 /* animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
+		954B8AF725A38895006520D1 /* history.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = history.json; sourceTree = "<group>"; };
+		954B8AF825A38896006520D1 /* science.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = science.json; sourceTree = "<group>"; };
 		95BB807B2595E368001FE75F /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 		95BB808225962A13001FE75F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		95C1390F25861BC1009FC623 /* SabiasQue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SabiasQue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,10 +76,14 @@
 		950E1C08259DBF2A006D7CB1 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
-				950E1C0E259DBF38006D7CB1 /* animals.json */,
-				950E1C0C259DBF37006D7CB1 /* history.json */,
-				950E1C0A259DBF37006D7CB1 /* sports.json */,
-				950E1C0B259DBF37006D7CB1 /* science.json */,
+				950E1C0E259DBF38006D7CB1 /* animales.json */,
+				950E1C0C259DBF37006D7CB1 /* historia.json */,
+				950E1C0A259DBF37006D7CB1 /* deportes.json */,
+				950E1C0B259DBF37006D7CB1 /* ciencia.json */,
+				954B8AF625A38895006520D1 /* animals.json */,
+				954B8AF725A38895006520D1 /* history.json */,
+				954B8AF825A38896006520D1 /* science.json */,
+				954B8AF525A38895006520D1 /* sports.json */,
 			);
 			path = Facts;
 			sourceTree = "<group>";
@@ -201,11 +213,15 @@
 				95C1391F25861BC1009FC623 /* LaunchScreen.storyboard in Resources */,
 				95C1391C25861BC1009FC623 /* Preview Assets.xcassets in Resources */,
 				95C1392B25861DFF009FC623 /* Lato-Regular.ttf in Resources */,
-				950E1C12259DBFF2006D7CB1 /* animals.json in Resources */,
+				950E1C12259DBFF2006D7CB1 /* animales.json in Resources */,
 				95C1391925861BC1009FC623 /* Assets.xcassets in Resources */,
-				950E1C13259DBFF2006D7CB1 /* sports.json in Resources */,
-				950E1C14259DBFF2006D7CB1 /* science.json in Resources */,
-				950E1C15259DBFF2006D7CB1 /* history.json in Resources */,
+				950E1C13259DBFF2006D7CB1 /* deportes.json in Resources */,
+				954B8AFA25A38896006520D1 /* animals.json in Resources */,
+				950E1C14259DBFF2006D7CB1 /* ciencia.json in Resources */,
+				950E1C15259DBFF2006D7CB1 /* historia.json in Resources */,
+				954B8AF925A38896006520D1 /* sports.json in Resources */,
+				954B8AFC25A38896006520D1 /* science.json in Resources */,
+				954B8AFB25A38896006520D1 /* history.json in Resources */,
 				95C1392A25861DFF009FC623 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

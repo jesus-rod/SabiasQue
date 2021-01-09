@@ -10,7 +10,6 @@ import SwiftUI
 struct CategoryCard: View {
 
     @State var showModal = false
-
     @State var detailViewModel: DetailView.ViewModel
 
     var body: some View {
@@ -49,7 +48,7 @@ struct CategoryCard: View {
         }
     }
 
-    func updateFact() {
+    private func updateFact() {
         self.detailViewModel = FactsGenerator().generateFact(for: detailViewModel.factType)
     }
 
