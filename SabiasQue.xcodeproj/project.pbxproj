@@ -15,6 +15,8 @@
 		9535279F25974A35007F1D69 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535279E25974A35007F1D69 /* CategoryCard.swift */; };
 		953527A22597538B007F1D69 /* MainCTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953527A12597538B007F1D69 /* MainCTAButton.swift */; };
 		953527A5259886A8007F1D69 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953527A4259886A8007F1D69 /* Fact.swift */; };
+		954755CF25EE406B000C59F6 /* SabiasQueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954755CE25EE406B000C59F6 /* SabiasQueUITests.swift */; };
+		954755D925EE408D000C59F6 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954755D825EE408D000C59F6 /* SnapshotHelper.swift */; };
 		9548023E25A9FB2500B0DAF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9548024025A9FB2500B0DAF6 /* Localizable.strings */; };
 		9548024525A9FCC600B0DAF6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548024425A9FCC600B0DAF6 /* String+Localized.swift */; };
 		954B8AF925A38896006520D1 /* sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 954B8AF525A38895006520D1 /* sports.json */; };
@@ -35,6 +37,16 @@
 		95D6703125988B9800700358 /* Bundle+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D6703025988B9800700358 /* Bundle+Decode.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		954755D125EE406B000C59F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C1390725861BC1009FC623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C1390E25861BC1009FC623;
+			remoteInfo = SabiasQue;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		950E1C0A259DBF37006D7CB1 /* deportes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = deportes.json; sourceTree = "<group>"; };
 		950E1C0B259DBF37006D7CB1 /* ciencia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ciencia.json; sourceTree = "<group>"; };
@@ -44,6 +56,10 @@
 		9535279E25974A35007F1D69 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		953527A12597538B007F1D69 /* MainCTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCTAButton.swift; sourceTree = "<group>"; };
 		953527A4259886A8007F1D69 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		954755CC25EE406B000C59F6 /* SabiasQueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabiasQueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		954755CE25EE406B000C59F6 /* SabiasQueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabiasQueUITests.swift; sourceTree = "<group>"; };
+		954755D025EE406B000C59F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954755D825EE408D000C59F6 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		9548023F25A9FB2500B0DAF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9548024225A9FB5400B0DAF6 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9548024425A9FCC600B0DAF6 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -68,6 +84,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		954755C925EE406B000C59F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C1390C25861BC1009FC623 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +108,16 @@
 				9587C54825A9F28E008C51BD /* ES */,
 			);
 			path = Facts;
+			sourceTree = "<group>";
+		};
+		954755CD25EE406B000C59F6 /* SabiasQueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				954755D825EE408D000C59F6 /* SnapshotHelper.swift */,
+				954755CE25EE406B000C59F6 /* SabiasQueUITests.swift */,
+				954755D025EE406B000C59F6 /* Info.plist */,
+			);
+			path = SabiasQueUITests;
 			sourceTree = "<group>";
 		};
 		9587C54825A9F28E008C51BD /* ES */ = {
@@ -113,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				95C1391125861BC1009FC623 /* SabiasQue */,
+				954755CD25EE406B000C59F6 /* SabiasQueUITests */,
 				95C1391025861BC1009FC623 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				95C1390F25861BC1009FC623 /* SabiasQue.app */,
+				954755CC25EE406B000C59F6 /* SabiasQueUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +214,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		954755CB25EE406B000C59F6 /* SabiasQueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 954755D325EE406B000C59F6 /* Build configuration list for PBXNativeTarget "SabiasQueUITests" */;
+			buildPhases = (
+				954755C825EE406B000C59F6 /* Sources */,
+				954755C925EE406B000C59F6 /* Frameworks */,
+				954755CA25EE406B000C59F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				954755D225EE406B000C59F6 /* PBXTargetDependency */,
+			);
+			name = SabiasQueUITests;
+			productName = SabiasQueUITests;
+			productReference = 954755CC25EE406B000C59F6 /* SabiasQueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		95C1390E25861BC1009FC623 /* SabiasQue */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95C1392325861BC1009FC623 /* Build configuration list for PBXNativeTarget "SabiasQue" */;
@@ -205,6 +258,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					954755CB25EE406B000C59F6 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 95C1390E25861BC1009FC623;
+					};
 					95C1390E25861BC1009FC623 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -225,11 +282,19 @@
 			projectRoot = "";
 			targets = (
 				95C1390E25861BC1009FC623 /* SabiasQue */,
+				954755CB25EE406B000C59F6 /* SabiasQueUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		954755CA25EE406B000C59F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C1390D25861BC1009FC623 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +319,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		954755C825EE406B000C59F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954755CF25EE406B000C59F6 /* SabiasQueUITests.swift in Sources */,
+				954755D925EE408D000C59F6 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C1390B25861BC1009FC623 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +348,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		954755D225EE406B000C59F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95C1390E25861BC1009FC623 /* SabiasQue */;
+			targetProxy = 954755D125EE406B000C59F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9548024025A9FB2500B0DAF6 /* Localizable.strings */ = {
@@ -296,6 +378,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		954755D425EE406B000C59F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8MT7DH3FAZ;
+				INFOPLIST_FILE = SabiasQueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jesus-rod.SabiasQueUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SabiasQue;
+			};
+			name = Debug;
+		};
+		954755D525EE406B000C59F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8MT7DH3FAZ;
+				INFOPLIST_FILE = SabiasQueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jesus-rod.SabiasQueUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SabiasQue;
+			};
+			name = Release;
+		};
 		95C1392125861BC1009FC623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -404,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,6 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SabiasQue/Preview Content\"";
 				DEVELOPMENT_TEAM = 8MT7DH3FAZ;
 				ENABLE_PREVIEWS = YES;
@@ -431,7 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jesus-rod.SabiasQue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -441,6 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SabiasQue/Preview Content\"";
 				DEVELOPMENT_TEAM = 8MT7DH3FAZ;
 				ENABLE_PREVIEWS = YES;
@@ -452,13 +574,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jesus-rod.SabiasQue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		954755D325EE406B000C59F6 /* Build configuration list for PBXNativeTarget "SabiasQueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954755D425EE406B000C59F6 /* Debug */,
+				954755D525EE406B000C59F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95C1390A25861BC1009FC623 /* Build configuration list for PBXProject "SabiasQue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

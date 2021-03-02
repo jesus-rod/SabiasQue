@@ -26,6 +26,7 @@ struct CategoryCard: View {
                     .font(.custom("Lato-Bold", size: 24))
                     .foregroundColor(ColorConstants.primaryText)
                     .multilineTextAlignment(.center)
+                    .accessibility(label: Text("labelTitle"))
                 Text(detailViewModel.title)
                     .font(.custom("Lato-Regular", size: 14))
                     .foregroundColor(ColorConstants.secondaryText)

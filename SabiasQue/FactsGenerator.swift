@@ -50,7 +50,8 @@ struct FactsGenerator {
 
 
     func generateFact(for factType: FactType) -> DetailView.ViewModel {
-        let fact = Bundle.main.decode([Fact].self, from: "\(factType.rawValue).json")
+        let fileName = "\(factType.name()).json".lowercased()
+        let fact = Bundle.main.decode([Fact].self, from: fileName)
         let randomFact = fact.randomElement()!
         let viewModel = DetailView.ViewModel(factType: factType, title: randomFact.title, body: randomFact.body, image: factType.rawValue)
         return viewModel

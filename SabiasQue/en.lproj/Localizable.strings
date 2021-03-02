@@ -5,6 +5,7 @@
   Created by Jesus Rodriguez on 09.01.21.
   
 */
+"lang" = "en";
 "SelectCategoryHeader" = "Select a category";
 "DidYouKnowHeader" = "Did you know...";
 "BackCTA" = "Dismiss";
