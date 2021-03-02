@@ -45,10 +45,10 @@ struct DetailView: View {
                 Text(viewModel.title)
                     .font(.custom("Lato-Bold", size: 24))
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(ColorConstants.primaryText)
                 Text(viewModel.body)
                     .font(.custom("Lato-Regular", size: 16))
                     .foregroundColor(ColorConstants.tertiaryText)
-                    .foregroundColor(ColorConstants.secondaryText)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
 
