@@ -43,7 +43,7 @@ struct CategoryCard: View {
         .sheet(isPresented: $showModal, onDismiss: self.updateFact, content: {
             let viewModel = DetailView.ViewModel(factType: detailViewModel.factType, title: detailViewModel.title, body: detailViewModel.body, image: detailViewModel.image)
             DetailView(viewModel: viewModel)
-        })
+        }).animation(.default)
         .onTapGesture {
             self.showModal.toggle()
         }
